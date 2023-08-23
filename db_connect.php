@@ -5,11 +5,13 @@ try {
     $host = 'xlf3ljx3beaucz9x.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
     $db = 'y34bhol13013t4m4';
     $user = 'u3nm9urxv14doy8a';
-    $pass = 'equth4sc1f7vku8j';
+    $pass = 'rzkb78nuidgzr33c';
+    $port = 3306;
     $charset = 'utf8';
 
+
     // Create a new PDO instance for MySQL with the provided credentials and settings
-    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
     $conn = new PDO($dsn, $user, $pass);
 
     // Set the PDO error mode attribute to throw exceptions for error handling
