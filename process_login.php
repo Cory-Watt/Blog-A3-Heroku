@@ -17,7 +17,7 @@ $password = $_POST['password'];
 echo "<h2>You attempted to login with " . $user_name . "</h2>";
 
 // Prepare a statement to fetch the hashed password from the DB for the provided username
-$stmt = $conn->prepare("SELECT user_id, user_name, password FROM users WHERE CAST(user_name AS nvarchar(MAX)) = ?");
+$stmt = $conn->prepare("SELECT user_id, user_name, password FROM users WHERE user_name = ?");
 
 // Bind the input username to the placeholder in the SQL statement
 $stmt->bindParam(1, $user_name);
